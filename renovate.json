@@ -3,6 +3,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   
   "baseBranches": ["main"],
-  "automerge": true,
+  "packageRules": [
+    {
+      "automerge": true
+    }
+  ]
   "schedule": ["at any time"]
 }
