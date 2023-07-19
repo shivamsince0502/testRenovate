@@ -4,10 +4,6 @@
   
   "baseBranches": ["main"],
   "ignoreTests": true,
-  "packageRules": [
-    {
-      "automerge": true
-    }
-  ],
+      "automerge": true,
   "schedule": ["at any time"]
 }
