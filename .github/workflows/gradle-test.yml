@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
         - 'renovate/**'
+    types: [opened, reopened]
 
 jobs:
   build:
@@ -17,8 +18,12 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          java-version: 'adopt@1.11'
+          java-version: '11'
+          distribution: "adopt"
 
+      - name: Build with Gradle
+        run: ./gradlew clean test
+        
 #       - name: Build with Gradle
 #         run: ./gradlew clean test
 
