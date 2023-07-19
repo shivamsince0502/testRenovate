@@ -24,7 +24,7 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '5.0.2'
     	implementation 'org.projectlombok:lombok:0.11.4'
-	testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.1'
+	Implementation group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.1'
     	implementation group: 'com.guicedee.services', name: 'sl4j', version: '1.0.9.5-jre14'
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
 }
