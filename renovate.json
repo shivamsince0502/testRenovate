@@ -3,7 +3,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   
   "baseBranches": ["main"],
-  "branchPreserve": false,
   "ignoreTests": true,
   "prHourlyLimit": 100,
   "schedule": ["at any time"]
