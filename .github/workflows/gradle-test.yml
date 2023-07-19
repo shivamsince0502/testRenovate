@@ -1,0 +1,41 @@
+name: Gradle Test
+
+on:
+  pull_request:
+    branches:
+        - 'renovate/*'
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    name: Run Gradle Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 'adopt@1.11'
+
+      - name: Build with Gradle
+        run: ./gradlew clean test
+
+  run_tests_on_renovate_branch:
+    name: Run Gradle Tests on Renovate Branch
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/heads/Renovate')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 'adopt@1.11'
+
+      - name: Build with Gradle
+        run: ./gradlew clean test
