@@ -26,7 +26,7 @@ jobs:
         
       - name: Merge PR on success
         if: ${{ failure() }}
-        uses: repo-sync/github-sync@v3
+        uses: plm9606/automerge_actions@1.2.2
         with:
           source_repo: ${{ github.repository }}
           source_branch: ${{ github.head_ref }}
