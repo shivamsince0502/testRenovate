@@ -3,7 +3,7 @@ name: Gradle Test
 on:
   pull_request:
     branches:
-        - 'renovate/**'
+        - 'main'
     types: [opened, reopened]
 
 jobs:
