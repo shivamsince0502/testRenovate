@@ -1,9 +1,9 @@
 name: Gradle Test
 
 on:
-  pull_request:
+  push:
     branches:
-        - 'renovate/*'
+        - 'renovate/mysql-mysql-connector-java-8.x'
 
 jobs:
   build:
