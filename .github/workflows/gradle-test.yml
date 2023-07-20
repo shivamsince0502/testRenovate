@@ -24,13 +24,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean test
         
-#       - name: Merge PR on success
-#         if: ${{ failure() }}
-#         uses: plm9606/automerge_actions@1.2.2
-#         with:
-#           source_repo: ${{ github.repository }}
-#           source_branch: ${{ github.head_ref }}
-#           destination_branch: ${{ github.base_ref }}
+      - name: Merge PR on success
+        if: ${{ failure() }}
+        uses: pascalgn/automerge-action@v0.11.0
+        with:
+          source_repo: ${{ github.repository }}
+          source_branch: ${{ github.head_ref }}
+          destination_branch: ${{ github.base_ref }}
         
 #       - name: Build with Gradle
 #         run: ./gradlew clean test
