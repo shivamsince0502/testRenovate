@@ -23,6 +23,9 @@ dependencies {
 	implementation 'org.testng:testng:7.1.0'
 	implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 
+	implementation group: 'org.scala-lang', name: 'scala-library', version: '2.11.7'
+
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
