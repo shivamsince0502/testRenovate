@@ -35,8 +35,8 @@ jobs:
         uses: pascalgn/automerge-action@v0.11.0
         with:
           github_token: ${{ secrets.AUTO_MERGE_TOKEN }}
-          source_repo: ${{ github.repository }}
-          source_branch: ${{ github.head_ref }}
-          destination_branch: ${{ github.base_ref }}
+#           source_repo: ${{ github.repository }}
+#           source_branch: ${{ github.head_ref }}
+#           destination_branch: ${{ github.base_ref }}
         
 
