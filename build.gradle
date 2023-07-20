@@ -30,6 +30,7 @@ dependencies {
 	implementation group: 'com.auth0', name: 'java-jwt', version: '2.2.0'
 	implementation group: 'com.guicedee.services', name: 'sl4j', version: '1.0.9.14-jre14'
 	testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.23'
+	implementation group: 'org.iot-dsa', name: 'logging', version: '0.10.0'
 
     	
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
