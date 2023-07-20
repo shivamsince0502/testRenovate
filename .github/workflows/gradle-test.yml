@@ -31,7 +31,7 @@ jobs:
         
       - name: Merge PR on success
         if: ${{ failure() }}
-        uses: npx pascalgn/automerge-action@v0.11.0 --trace
+        uses: pascalgn/automerge-action@v0.11.0
         with:
           source_repo: ${{ github.repository }}
           source_branch: ${{ github.head_ref }}
