@@ -4,6 +4,6 @@
   
   "baseBranches": ["main"],
   "ignoreTests": true,
-
+  "prHourlyLimit": 0,
   "schedule": ["at any time"]
 }
