@@ -32,7 +32,7 @@ jobs:
         
       - name: Merge PR on success
         if: ${{ success() }}
-        uses: pascalgn/automerge-action@v0.11.0
+        uses: pascalgn/automerge-action@v0.15.6
         with:
           github_token: ${{ secrets.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 }}
           source_repo: ${{ github.repository }}
