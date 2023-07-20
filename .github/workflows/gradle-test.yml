@@ -39,22 +39,4 @@ jobs:
           source_branch: ${{ github.head_ref }}
           destination_branch: ${{ github.base_ref }}
         
-#       - name: Build with Gradle
-#         run: ./gradlew clean test
 
-#   run_tests_on_renovate_branch:
-#     name: Run Gradle Tests on Renovate Branch
-#     runs-on: ubuntu-latest
-#     if: startsWith(github.ref, 'refs/heads/Renovate')
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-
-#       - name: Setup Java
-#         uses: actions/setup-java@v3
-#         with:
-#           java-version: 'adopt@1.11'
-
-#       - name: Build with Gradle
-#         run: ./gradlew clean test
