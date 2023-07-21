@@ -18,7 +18,7 @@
     {
       "groupName": "devDependencies (non-major)",
       "matchUpdateTypes": ["minor", "patch"],
-      "semanticCommits": "disabled"
+      "semanticCommits": "disabled",
       "commitMessageTopic": "non-major"
     }
   ]
