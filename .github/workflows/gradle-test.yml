@@ -33,13 +33,10 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean test
         
-      - name: Merge PR on success
-        if: ${{ success() }}
-        uses: pascalgn/automerge-action@v0.11.0
+      - uses: peter-evans/enable-pull-request-automerge@v3
         with:
-          github_token: ${{ secrets.AUTO_MERGE_TOKEN }}
-          source_repo: ${{ github.repository }}
-          source_branch: ${{ github.head_ref }}
-          destination_branch: ${{ github.base_ref }}
+          token: ${{ secrets.AUTO_MERGE_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: merge
         
 
