@@ -10,7 +10,7 @@ jobs:
   build:
     name: Run Gradle Tests
     runs-on: ubuntu-latest
-
+    if: startsWith( github.event.pull_request.title ,'major/')
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
