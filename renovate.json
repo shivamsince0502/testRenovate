@@ -13,13 +13,13 @@
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
       "semanticCommits": "disabled",
-      "commitMessageTopic": "major"
+      "commitMessage": "major"
     },
     {
       "groupName": "devDependencies (non-major)",
       "matchUpdateTypes": ["minor", "patch"],
       "semanticCommits": "disabled",
-      "commitMessageTopic": "non-major"
+      "commitMessage": "non-major"
     }
   ]
 }
