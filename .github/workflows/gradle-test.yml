@@ -37,7 +37,7 @@ jobs:
         if: ${{ success() }}
         uses: pascalgn/automerge-action@v0.11.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.AUTO_MERGE_TOKEN }}
           source_repo: ${{ github.repository }}
           source_branch: ${{ github.head_ref }}
           destination_branch: ${{ github.base_ref }}
