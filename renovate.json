@@ -1,9 +1,40 @@
-
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+"$schema": "https://docs.renovatebot.com/renovate-schema.json",
   
   "baseBranches": ["main"],
   "ignoreTests": true,
   "prHourlyLimit": 0,
   "schedule": ["at any time"]
+
+  "packageRules": [
+    {
+      "groupName": "Major Updates",
+      "updateTypes": ["major"],
+      "prTitlePrefix": "major/",
+      "automergeType": "pr",
+      "semanticCommits": "disabled",
+      "commitMessageTopic": "major"
+    },
+    {
+      "groupName": "Non-Major Updates",
+      "updateTypes": ["minor", "patch"],
+      "prTitlePrefix": "non-major/",
+      "automergeType": "pr",
+      "semanticCommits": "disabled"
+    }
+  ],
+
+  "platform": "github",
+  "githubToken": "${env.AUTO_MERGE_TOKEN}",
+  "logFileLevel": "info",
+  "logLevel": "warn",
+
+  "notifications": [
+    {
+      "type": "github-pr",
+      "level": "major",
+      "schedule": "after"
+    }
+  ]
 }
+
