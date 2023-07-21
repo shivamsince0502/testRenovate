@@ -6,21 +6,15 @@
   "ignoreTests": true,
   "prHourlyLimit": 0,
   "schedule": ["at any time"],
-
+  
   "packageRules": [
     {
-      "groupName": "devDependencies (major)",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["major"],
-      "semanticCommits": "disabled",
-      "commitMessage": "major"
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     },
     {
-      "groupName": "devDependencies (non-major)",
-      "matchUpdateTypes": ["minor", "patch"],
-      "semanticCommits": "disabled",
-      "commitMessage": "non-major"
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
-  ]
 }
 
