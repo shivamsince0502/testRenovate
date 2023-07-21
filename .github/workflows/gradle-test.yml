@@ -27,8 +27,6 @@ jobs:
           node-version: '14'
           distribution: "adopt"
           
-#       - name: Update Gradle
-#         run: ./gradlew wrapper --gradle-version 7.2
 
       - name: Build with Gradle
         run: ./gradlew clean test
