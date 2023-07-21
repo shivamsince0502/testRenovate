@@ -1,10 +1,26 @@
-{
 
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+{
+"$schema": "https://docs.renovatebot.com/renovate-schema.json",
   
   "baseBranches": ["main"],
   "ignoreTests": true,
   "prHourlyLimit": 0,
-  "schedule": ["at any time"]
-  
+  "schedule": ["at any time"],
+
+  "packageRules": [
+    {
+      "groupName": "devDependencies (major)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommits": "disabled",
+      "commitMessageTopic": "major"
+    },
+    {
+      "groupName": "devDependencies (non-major)",
+      "matchUpdateTypes": ["minor", "patch"],
+      "semanticCommits": "disabled"
+      "commitMessageTopic": "non-major"
+    }
+  ]
 }
+
