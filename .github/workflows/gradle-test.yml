@@ -27,7 +27,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean test
         
-        if: contains(github.head_ref, 'non-major')
+        if: success() && contains(github.head_ref, 'non-major') 
       - uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.AUTO_MERGE_TOKEN }}
