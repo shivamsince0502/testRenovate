@@ -1,4 +1,3 @@
-
 {
 "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   
@@ -8,12 +7,23 @@
   "schedule": ["at any time"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false,
+      "groupName": "devDependencies (major)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommits": "disabled",
+      "commitMessage": "major",
+      "git": {
+        "branchPrefix": "renovate/major/"
+      }
     },
     {
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "groupName": "devDependencies (non-major)",
+      "matchUpdateTypes": ["minor", "patch"],
+      "semanticCommits": "disabled",
+      "commitMessage": "non-major",
+      "git": {
+        "branchPrefix": "renovate/non-major/"
+      }
     }
   ]
 }
