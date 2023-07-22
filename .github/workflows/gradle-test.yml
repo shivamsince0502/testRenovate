@@ -41,6 +41,6 @@ jobs:
           merge-method: merge
           
       - name: Major Update
-        if: ! contains(github.head_ref, 'non-major')
+        if: false == contains(github.head_ref, 'non-major')
         run: echo "Gradle tests failed! The pull request will not be merged."
         
