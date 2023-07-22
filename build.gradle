@@ -23,9 +23,9 @@ dependencies {
 	implementation 'org.testng:testng:7.8.0'
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	implementation group: 'org.codehaus.woodstox', name: 'woodstox-core-asl', version: '4.4.1'
-	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0.1'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
 	implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '4.0.3'
-	implementation group: 'org.simpleframework', name: 'simple-xml', version: '2.3.5'
+	implementation group: 'org.simpleframework', name: 'simple-xml', version: '2.7.1'
 	implementation group: 'com.fasterxml', name: 'aalto-xml', version: '0.9.11'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
