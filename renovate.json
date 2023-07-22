@@ -12,18 +12,16 @@
       "matchUpdateTypes": ["major"],
       "semanticCommits": "disabled",
       "commitMessage": "major",
-      "git": {
-        "branchPrefix": "renovate/major/"
-      }
+      "branchPrefix": "renovate/major/"
+      
     },
     {
       "groupName": "devDependencies (non-major)",
       "matchUpdateTypes": ["minor", "patch"],
       "semanticCommits": "disabled",
       "commitMessage": "non-major",
-      "git": {
-        "branchPrefix": "renovate/non-major/"
-      }
+      "branchPrefix": "renovate/non-major/"
+  
     }
   ]
 }
