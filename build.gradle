@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	implementation group: 'org.codehaus.woodstox', name: 'woodstox-core-asl', version: '4.0.0'
 	implementation group: 'org.scalaj', name: 'scalaj-http_2.11', version: '1.0.0'
+	implementation group: 'com.typesafe.akka', name: 'akka-slf4j_3', version: '2.7.0'
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
