@@ -33,7 +33,7 @@ jobs:
         run: echo "Gradle tests passed!"
         
       - name: Merge Pull Request
-        if: steps.gradle_test_result.outcome == 'success'
+        if: contains(github.head_ref, 'non-major')
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.AUTO_MERGE_TOKEN }}
