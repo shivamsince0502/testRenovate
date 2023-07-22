@@ -7,12 +7,14 @@
   "schedule": ["at any time"],
   "packageRules": [
     {
+      "groupName": "devDependencies (major)",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
       "branchPrefix": "major/${depName}"
       
     },
     {
+      "groupName": "devDependencies (non-major)",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "branchPrefix": "non-major/${depName}"
