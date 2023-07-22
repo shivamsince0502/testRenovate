@@ -26,10 +26,22 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew clean test
+        id: gradle_test_result
         
-        if: success() && contains(github.head_ref, 'non-major') 
-      - uses: peter-evans/enable-pull-request-automerge@v3
+        
+      - name: Check Gradle Test Status
+        if: steps.gradle_test_result.outcome == 'success'
+        run: echo "Gradle tests passed!"
+
+      - name: Merge Pull Request
+        if: steps.gradle_test_result.outcome == 'success'
+        uses: peter-evans/merge-pull-request@v2
         with:
-          token: ${{ secrets.AUTO_MERGE_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: merge
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
+#         if: success() && contains(github.head_ref, 'non-major') 
+#       - uses: peter-evans/enable-pull-request-automerge@v3
+#         with:
+#           token: ${{ secrets.AUTO_MERGE_TOKEN }}
+#           pull-request-number: ${{ github.event.pull_request.number }}
+#           merge-method: merge
