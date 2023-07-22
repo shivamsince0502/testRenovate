@@ -12,7 +12,7 @@
       "matchUpdateTypes": ["major"],
       "semanticCommits": "disabled",
       "commitMessage": "major",
-      "branchPrefix": "renovate/major/"
+      "branchPrefix": "major/"
       
     },
     {
@@ -20,7 +20,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "semanticCommits": "disabled",
       "commitMessage": "non-major",
-      "branchPrefix": "renovate/non-major/"
+      "branchPrefix": "non-major/"
   
     }
   ]
