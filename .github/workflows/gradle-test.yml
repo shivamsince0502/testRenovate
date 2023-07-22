@@ -39,4 +39,8 @@ jobs:
           token: ${{ secrets.AUTO_MERGE_TOKEN }}
           pull-request-number: ${{ github.event.pull_request.number }}
           merge-method: merge
+          
+      - name: Major Update
+        if: ! contains(github.head_ref, 'non-major')
+        run: echo "Gradle tests failed! The pull request will not be merged."
         
