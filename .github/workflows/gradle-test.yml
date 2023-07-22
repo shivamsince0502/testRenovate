@@ -1,20 +1,18 @@
 name: Gradle Test
-
 on:
   pull_request:
     branches:
         - 'main'
     types: [opened, reopened]
-
 jobs:
   build:
     name: Run Gradle Tests
     runs-on: ubuntu-latest
- 
+    if: contains(github.head_ref, 'non-major')
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
@@ -26,22 +24,12 @@ jobs:
         with:
           node-version: '14'
           distribution: "adopt"
-          
 
       - name: Build with Gradle
         run: ./gradlew clean test
         
-      - name: Check Test Results
-        id: tests
-        run: |
-          # Modify this command based on your test framework and exit status
-          if [ $? -eq 0 ]; then
-            echo "Tests passed successfully."
-            echo "::set-output name=tests_passed::true"
-          else
-            echo "Tests failed."
-            echo "::set-output name=tests_passed::false"
-          fi
-
-        
-
+      - uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.AUTO_MERGE_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: merge
