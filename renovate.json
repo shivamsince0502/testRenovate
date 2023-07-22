@@ -10,17 +10,13 @@
       "groupName": "devDependencies (major)",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "semanticCommits": "disabled",
-      "commitMessage": "major",
-      "branchPrefix": major/
+      "branchPrefix": "major/${depName}"
       
     },
     {
       "groupName": "devDependencies (non-major)",
       "matchUpdateTypes": ["minor", "patch"],
-      "semanticCommits": "disabled",
-      "commitMessage": "non-major",
-      "branchPrefix": non-major/
+      "branchPrefix": "non-major/${depName}"
   
     }
   ]
