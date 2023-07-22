@@ -10,7 +10,7 @@ jobs:
   build:
     name: Run Gradle Tests
     runs-on: ubuntu-latest
-    if: contains( github.event.pull_request.commit_message ,'major')
+ 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
