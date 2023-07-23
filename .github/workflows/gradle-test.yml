@@ -29,11 +29,11 @@ jobs:
         id: gradle_test_result
         
       - name: Check Gradle Test Status
-        if: always()
+        if: steps.gradle_test_result.outcome == 'success'
         run: echo "Gradle tests passed!"
         
       - name: Merge Pull Request
-        if: steps.gradle_test_result.outcome == 'success' && contains(github.head_ref, 'non-major')
+        if: contains(github.head_ref, 'non-major')
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.AUTO_MERGE_TOKEN }}
@@ -41,7 +41,7 @@ jobs:
           merge-method: merge
           
       - name: Major Update
-        if: steps.gradle_test_result.outcome == 'success' && ${{ !contains(github.head_ref, 'non-major') }}
+        if: ${{ !contains(github.head_ref, 'non-major') }}
         run: echo "The pull request will not be merged, as it is a Major update."
         continue-on-error: true
         
