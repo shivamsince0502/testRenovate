@@ -23,8 +23,8 @@ dependencies {
 	implementation 'org.testng:testng:7.8.0'
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	implementation group: 'org.objectweb.monolog', name: 'monolog-api', version: '1.8'
-	implementation group: 'org.clapper', name: 'grizzled-slf4j_2.9.1', version: '0.6.6'
-	implementation group: 'org.log4s', name: 'log4s_2.12', version: '1.6.1'
+	implementation group: 'org.clapper', name: 'grizzled-slf4j_2.9.1', version: '0.6.10'
+	implementation group: 'org.log4s', name: 'log4s_2.12', version: '1.10.0'
 
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
