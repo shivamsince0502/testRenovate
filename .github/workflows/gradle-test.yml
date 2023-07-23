@@ -33,13 +33,14 @@ jobs:
         run: echo "Gradle tests passed!"
 
       - name: Merge Pull Request
+        if: contains(github.head_ref, 'non-major')
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.AUTO_MERGE_TOKEN }}
           pull-request-number: ${{ github.event.pull_request.number }}
           merge-method: merge
 
-#       - name: Major Update
-#         if: ${{ !contains(github.head_ref, 'non-major') }}
-#         run: echo "The pull request will not be merged, as it is a Major update."
-#         continue-on-error: true
+      - name: Major Update
+        if: ${{ !contains(github.head_ref, 'non-major') }}
+        run: echo "The pull request will not be merged, as it is a Major update."
+        continue-on-error: true
