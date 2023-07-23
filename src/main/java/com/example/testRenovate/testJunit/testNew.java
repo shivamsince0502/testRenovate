@@ -15,6 +15,6 @@ public class testNew {
         String result = sampleController.getString();
 
         // Assert that the result is equal to "Shivam"
-        assertEquals("Shivm", result);
+        assertEquals("Shivam", result);
     }
 }
