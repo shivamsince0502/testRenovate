@@ -29,7 +29,7 @@ dependencies {
 	implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '2.3.3'
 	implementation group: 'xml-apis', name: 'xml-apis', version: '2.0.2'
 	implementation group: 'io.github.microutils', name: 'kotlin-logging', version: '1.12.5', ext: 'pom'
-	implementation group: 'org.clapper', name: 'grizzled-slf4j_2.9.2', version: '0.6.9'
+	implementation group: 'org.clapper', name: 'grizzled-slf4j_2.9.2', version: '0.6.10'
 
 
 
