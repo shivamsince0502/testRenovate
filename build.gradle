@@ -23,7 +23,7 @@ dependencies {
 	implementation 'org.testng:testng:7.8.0'
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	implementation group: 'org.apache.maven', name: 'maven-project', version: '2.2.1'
-	implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.80'
+	implementation group: 'com.alibaba', name: 'fastjson', version: '2.0.37'
 	implementation group: 'cheshire', name: 'cheshire', version: '2.0.0'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
