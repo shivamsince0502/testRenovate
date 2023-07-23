@@ -25,6 +25,7 @@ dependencies {
 	
 	implementation group: 'net.sf.flexjson', name: 'flexjson', version: '2.0'
 	implementation group: 'net.arnx', name: 'jsonic', version: '1.2.7'
+	implementation group: 'com.bluelinelabs', name: 'logansquare', version: '1.0.5'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
