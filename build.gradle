@@ -27,6 +27,8 @@ dependencies {
 	implementation group: 'xerces', name: 'xmlParserAPIs', version: '2.6.2'
 	implementation group: 'com.fasterxml', name: 'aalto-xml', version: '0.9.9'
 	implementation 'org.codehaus.woodstox:woodstox-core-asl:4.4.1'
+	implementation 'xmlpull:xmlpull:1.1.2.1'
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
