@@ -8,10 +8,10 @@ jobs:
   build:
     name: Run Gradle Tests
     runs-on: ubuntu-latest
+    if: contains( github.event.pull_request.commit_message ,'major')
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
@@ -23,23 +23,18 @@ jobs:
         with:
           node-version: '14'
           distribution: "adopt"
+          
       - name: Build with Gradle
         run: ./gradlew clean test
-        id: gradle_test_result
-        
-      - name: Check Gradle Test Status
-        if: steps.gradle_test_result.outcome == 'success'
-        run: echo "Gradle tests passed!"
-        
-      - name: Merge Pull Request
-        if: contains(github.head_ref, 'non-major')
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.AUTO_MERGE_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: merge
-          
-      - name: Major Update
-        if: ${{ !contains(github.head_ref, 'non-major') }}
-        run: echo "The pull request will not be merged, as it is a Major update."
-        continue-on-error: true
+
+      - name: Check Test Results
+        id: tests
+        run: |
+          # Modify this command based on your test framework and exit status
+          if [ $? -eq 0 ]; then
+            echo "Tests passed successfully."
+            echo "::set-output name=tests_passed::true"
+          else
+            echo "Tests failed."
+            echo "::set-output name=tests_passed::false"
+          fi
