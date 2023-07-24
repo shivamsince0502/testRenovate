@@ -29,8 +29,9 @@ dependencies {
 	implementation 'org.codehaus.woodstox:woodstox-core-asl:4.4.1'
 	implementation 'xmlpull:xmlpull:1.1.2.1'
 	implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
-
-testImplementation 'org.apache.derby:derby:10.16.1.1'
+	implementation 'com.alibaba:druid:0.1.19'
+	
+	testImplementation 'org.apache.derby:derby:10.16.1.1'
 	
 
 
