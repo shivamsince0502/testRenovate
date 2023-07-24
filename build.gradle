@@ -24,7 +24,7 @@ dependencies {
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	
 	implementation group: 'org.jsonbuddy', name: 'jsonbuddy', version: '0.7.1'
-	implementation group: 'net.liftweb', name: 'lift-json-scalaz7_2.11', version: '2.6'
+	implementation group: 'net.liftweb', name: 'lift-json-scalaz7_2.11', version: '3.5.0'
 	implementation group: 'org.sharegov', name: 'mjson', version: '1.1'
 	implementation group: 'net.sf.flexjson', name: 'flexjson', version: '2.1'
 
