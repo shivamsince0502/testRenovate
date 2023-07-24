@@ -14,12 +14,6 @@
     {
       "matchUpdateTypes": ["major"],
       "automerge": false
-    }
-
-
-    
+    }  
   ] 
-
-
-
 }
