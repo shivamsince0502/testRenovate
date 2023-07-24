@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     name: Run Gradle Tests
-    if: contains(github.head_ref, 'non-major')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
