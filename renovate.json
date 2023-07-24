@@ -20,12 +20,7 @@
   ],
 
   
-  "packageRules": [
-    {
-      "matchCurrentVersion": ">=2.0.0",
-      "matchDepName": "spring-boot-starter-web"
-    }
-  ]
+
 
 
 }
