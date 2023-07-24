@@ -23,10 +23,9 @@ dependencies {
 	implementation 'org.testng:testng:7.8.0'
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	
-	implementation group: 'org.jsonbuddy', name: 'jsonbuddy', version: '0.7.1'
-	implementation group: 'net.liftweb', name: 'lift-json-scalaz7_2.11', version: '2.6'
-	implementation group: 'org.sharegov', name: 'mjson', version: '1.1'
-	implementation group: 'net.sf.flexjson', name: 'flexjson', version: '2.1'
+	implementation group: 'xml-apis', name: 'xml-apis', version: '1.3.02'
+	implementation group: 'xerces', name: 'xmlParserAPIs', version: '2.0.0'
+	implementation group: 'com.fasterxml', name: 'aalto-xml', version: '0.9.9'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
