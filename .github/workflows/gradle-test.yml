@@ -24,7 +24,7 @@ jobs:
           distribution: "adopt"
           
       - name: Build with Gradle
-        run: ./gradlew clean test
+        run: ./gradlew build test
 
       - name: Check Test Results
         id: tests
