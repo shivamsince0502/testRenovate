@@ -24,7 +24,7 @@ dependencies {
 	implementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 	implementation 'org.apache.hive:hive-jdbc:2.0.1'
 	implementation 'com.oracle.database.jdbc:ojdbc8:19.8.0.0'
-	implementation 'org.apache.camel.kafkaconnector:camel-kafka-connector:0.6.1'
+	implementation 'org.apache.camel.kafkaconnector:camel-kafka-connector:4.0.0'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
